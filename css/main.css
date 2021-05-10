@@ -16,6 +16,12 @@ body {
 	background-color: white;
 }
 
+#test{
+	height: 200px;
+	text-align: center;
+	background-color: black;
+}
+
 #trailer {
 	border: 0px solid green;
 	height: 150px;
@@ -84,6 +90,7 @@ body {
 	height: 20px;
 	}
 	
+
 	
 /* Formatierungen für die Inhaltselemente */
 .bodytext {

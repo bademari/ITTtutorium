@@ -1,0 +1,2 @@
+1. Schritt: Datenbankexport
+	command: mysqldump --xml -u inttentwickler -pITT11pra! -h localhost  Allgold > dbkatalog.xml
