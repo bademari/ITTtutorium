@@ -1,108 +1,72 @@
-@viewport{
-width: device-width;
-zoom: 1.0;
+
+/* {
+  box-sizing: border-box;
 }
-
-
-
-/* ################ Layout mit CSS-Grid ########################### */
-
-/* Für Handys: */
-.main {
-  display: grid;
-
-  grid-template-areas: "a a a"
-                       "b b b"
-                       "c c c"
-                       "d d d"
-                       "e e e";
-
-}
-
-    /* Für Tablets und große Handys:  */
-@media only screen and (min-width: 750px) {
-.main-tab{
-  display: grid;
-  width: 100%;
- 
-  grid-template-areas: "a a a"
-                       "c c c"
-                       "b d d"
-                       "e e e";
-
-  }
-}
-
-  /* Für desktop PC:                        */
-@media only screen and (min-width: 1000px) {
-.main-desk{
-  display: grid;
- 
-  grid-template-areas: "a a a"
-                       "b c d"
-                       "e e e";
-  /*grid-template-rows: 50px 1fr 30px;*/
-  /*grid-auto-rows: minmax(100px, auto); */
-  grid-template-columns: 300px 2fr 1fr;  /* 1 frame breit + 2 frames breit + .. */
-  }  
-}
-
-
+*/
 
 body {
 	text-align: center;
-	background-color: white;
 	font-family: Verdana, Arial;
+	max-width: 80em;
+	margin:0 auto;			/*damit die Seite zentriert wird*/
+	display: -webkit-flex;
+	display: flex;			/*alle Kinderelemente werden zu flex items*/
+	-webkit-flex-flow: row wrap;
+    flex-flow: row wrap;	/*damit Elemente in mehreren Reihen dargestellt werden, wenn sie (zusammen) die verfügbare Breite überschreiten*/
 }
 
+
+header, nav, footer, section, aside,footer{
+	-webkit-flex: 1 100%;
+	flex: 1 100%;
+	padding: 10px;
+	margin: 10px;
+	
+	border: 1px solid;
+
+}
+
+
+
 header {
-  padding: 30px;
-  text-align: center;
+  
+  border-color: black;
   background: #1abc9c;
   color: white;
   font-size: 30px;
+  margin-bottom: 40px;
+}
+
+footer {
+  background-color: #1abc9c;
+  color: white;
+  border-color: black;
+  text-align: center;
+  margin-top: 40px;
 }
 
 
+article {
+	background: white;
+	border-color: #df6c20;
+	margin-right: 10px;
+	-webkit-flex: 3 1 0%;
+	flex: 3 1 0%;
+	padding: 30px;
+}
 
-form{
-	margin-top: 20px auto; 
-	width: 500px;
-	position: fixed;
-	z-index: 1;
-	top: 320px;
-	left: 700px;
-	text-align: left;	
+aside {
 	
-}
-
-footer{
 	
-	grid-area: e;
+	-webkit-flex: 1 1 0%;
+	flex: 1 1 0%;
+}
+
+nav{
+	border-color: white;
+	-webkit-flex: 1 1 0%;
+	flex: 1 1 0%;
 	
-}
-
-
-/* DIV-Box mit den Inhalten 
-#main {
-	margin: 0px auto;
-	text-align: center; 
-	width: 80em; 
-	background-color: white;
-}*/
-
-#navi {      
-  grid-area: b;
- 
-}
-
-#indexnavi{
-	grid-area: c;
-}
-
-#inhalt {
-  grid-area: c; 
-  
 }
 
 
@@ -114,11 +78,11 @@ footer{
   	padding: 12px;
   	margin: 10px 0;
   	border: none;
-  	width: 100%;
+  	width: 50%;*/
   	border-radius: 3px;
   	cursor: pointer;
   	font-size: 17px;
-	color: white;
+	
 	/*box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 6px 0 rgba(0,0,0,0.19);*/
 }
 
@@ -148,242 +112,27 @@ footer{
 }
 
 
+/*table styling*/
 
-
-.sidenav {
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 350px;
-  left: 1000px;
-  background: #1abc9c;
-  overflow-x: hidden;
-  padding: 8px 0;
-  
+#customers {
+  font-family: Verdana, Arial;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-.sidenav a:hover {
-  color: black;
-}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
 
+#customers tr:hover {background-color: #ddd;}
 
-.indexnav {
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 350px;
-  left: 320px;
-  background: #1abc9c;
-  overflow-x: hidden;
-  padding: 8px 0;
-  
-}
-
-.indexnav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-}
-
-.indexnav a:hover {
-  color: black;
-}
-
-
-
-
-.main {
-  margin-left: 140px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-/* ######################################################  */ 
-/* Tabelle - Inhaltsbereich */
-
-.tabelle th h1 {
-	font-weight: bold;
-	font-size: 1em;
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
   text-align: left;
-  color: orange;
+  background-color: #11c2b0;
+  color: white;
 }
-
-.tabelle td {
-	  font-weight: normal;
-	  font-size: 1em;
-  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
-	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
-	        box-shadow: 0 2px 2px -2px #0E1119;
-}
-
-.tabelle {
-	text-align: left;
-	overflow: hidden;
-	width: 50%;
-	margin: 0 auto;
-	/*position: fixed;
-	top: 500px;
-	left: 300px;  nochmal anschauen, wie es gut mit dem Aufbau geht!!!ll*/
-  display: table; 
-  padding: 0 0 8em 0;
-  
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  line-height: 1.5em;
-  color:gray;
-  background-color:#1F2739;
-  }
-
-.tabelle td, .tabelle th {
-	  padding-bottom: 1%;
-	  padding-top: 2%;
-    padding-left:2%;  
-}
-
-/* Background-color of the odd rows */
-.tabelle tr:nth-child(odd) {
-	  background-color: #324C60;
-}
-
-/* Background-color of the even rows */
-.tabelle tr:nth-child(even) {
-	  background-color: #2C3447;
-}
-
-.tabelle th {
-	  background-color: #1F2739;
-}
-
-.tabelle td:first-child { color: orange; }
-
-.tabelle tr:hover {
-   background-color: #464A52;
-   -webkit-box-shadow: 0 6px 6px -6px #0E1111;
-	 -moz-box-shadow: 0 6px 6px -6px #0E1111;
-	 box-shadow: 0 6px 6px -6px #0E1111;
-}
-
-.tabelle td:hover {
-  background-color: orange;
-  color: #1F2739;
-  font-weight: bold;
-  
-  box-shadow: #DF9507 -1px 1px, #BF8014 -2px 2px, #9F6521 -3px 3px, #7F5028 -4px 4px, #5F4033 -5px 5px, #3F3337 -6px 6px;
-  transform: translate3d(6px, -6px, 0);
-  
-  transition-delay: 0s;
-	  transition-duration: 0.8s;
-	  transition-property: all;
-  transition-timing-function: line;
-}
-
-
-
-/*altes Zeugs
-#menuhome{
-
-	margin: 0px auto;
-	text-align: center;
-	border: 2px solid #B8DB7D; 
-	width: 811px; 
-	/* max-width: 100em;
-	background-color: black;
-
-}
-
-
-
-
-#trailer {
-	border: 0px solid green;
-	height: 150px;
-	text-align: center;
-	padding: 5px;
-}
-
-/* Box für das obere Menü 
-#menuetop{
-	border: 0px solid #036; 
-	background-color: #B8DB7D;
-	height: 31px;
-}
-
-/* Der Seitentitel nochmal unterhalb des Menüs 
-#titel {
-	border: 0px solid blue;
-	padding-top: 5px;
-	height: 20px; 
-	text-align: center;
-	font-weight: bold;
-}
-
-
-
-/* Box für den eigentlichen Content 
-#content {
- 	border: 0px solid black;  
-	margin-left: 15px; 
-	margin-right: 15px;
-	
-}
-
-
-
-/* Das untere Menü 
-#menuefooter{
-	clear: both;
-	border: 0px solid green; 
-	height: 34px;
-	text-color: #96988B;
-	text-align: center;
-	line-height: 30px;
-	margin-top: 10px;
-	background-color: #B8DB7D;
-	font-size : 12px;
-	font-family : Verdana;
-	font-weight : bold;
-	font-style : normal;
-	color : #00000;
-}
-
-#menufooter a {
-	text-decoration: none;
-	color: #000000;
-	}
-
-#menufooter a:hover {
-	text-decoration: underline;
-	color: #000000;
-	}
-
-/* Der Platzhalter unter dem unteren Menü 
-#bottom{
-	border: 0px solid grey; 
-	height: 20px;
-	}
-
-
-	
-/* Formatierungen für die Inhaltselemente 
-.bodytext {
-	font-size: 11pt;
-	}
-
-p.bodytext {
-	background-color: #FFFFFF; padding: 2px 4px 2px 4px; border: 1px solid #D8DB7D;}

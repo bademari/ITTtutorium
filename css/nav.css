@@ -1,94 +1,30 @@
 
 
-body {
-	text-align: center;
-	background-color: #D9EAB3;
-	font-family: Verdana, Arial;
-}
 
-/* DIV-Box mit den Inhalten */
-#main {
-	margin: 0px auto;
-	text-align: left;
-	 border: 2px solid #B8DB7D; 
-	 width: 811px; 
-	/* max-width: 100em;*/
-	background-color: white;
-}
-
-#trailer {
-	border: 0px solid green;
-	height: 150px;
-	text-align: center;
-	padding: 5px;
-}
-
-/* Box für das obere Menü */
-#menuetop{
-	border: 0px solid #036; 
-	background-color: #B8DB7D;
-	height: 31px;
-}
-
-/* Der Seitentitel nochmal unterhalb des Menüs */
-#titel {
-	border: 0px solid blue;
-	padding-top: 5px;
-	height: 20px; 
-	text-align: center;
-	font-weight: bold;
+.sidenav {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  top: 0;
+  left: 0;
+  background-color: #1abc9c;
+  overflow-x: hidden;
 }
 
 
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
 
-/* Box für den eigentlichen Content */
-#content {
- 	border: 0px solid black;  
-	margin-left: 15px; 
-	margin-right: 15px;
-	
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 
-
-/* Das untere Menü */
-#menuefooter{
-	clear: both;
-	border: 0px solid green; 
-	height: 34px;
-	text-color: #96988B;
-	text-align: center;
-	line-height: 30px;
-	margin-top: 10px;
-	background-color: #B8DB7D;
-	font-size : 12px;
-	font-family : Verdana;
-	font-weight : bold;
-	font-style : normal;
-	color : #00000;
-}
-
-#menufooter a {
-	text-decoration: none;
-	color: #000000;
-	}
-
-#menufooter a:hover {
-	text-decoration: underline;
-	color: #000000;
-	}
-
-/* Der Platzhalter unter dem unteren Menü */
-#bottom{
-	border: 0px solid grey; 
-	height: 20px;
-	}
-	
-	
-/* Formatierungen für die Inhaltselemente */
-.bodytext {
-	font-size: 11pt;
-	}
-
-p.bodytext {
-	background-color: #FFFFFF; padding: 2px 4px 2px 4px; border: 1px solid #D8DB7D;}
