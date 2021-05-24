@@ -1,0 +1,133 @@
+
+body {
+	text-align: center;
+	font-family: Verdana, Arial;
+	max-width: 80em;
+	margin:0 auto;			/*damit die Seite zentriert wird*/
+	display: -webkit-flex;
+	display: flex;			/*alle Kinderelemente werden zu flex items*/
+	-webkit-flex-flow: row wrap;
+    flex-flow: row wrap;	/*damit Elemente in mehreren Reihen dargestellt werden, wenn sie (zusammen) die verfügbare Breite überschreiten*/
+}
+
+
+header, nav, footer, section, aside,footer{
+	-webkit-flex: 1 100%;
+	flex: 1 100%;
+	padding: 10px;
+	margin: 10px;
+	
+	border: 1px solid;
+
+}
+
+
+
+header {
+  
+  border-color: black;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+footer {
+  background-color: #1abc9c;
+  color: white;
+  border-color: black;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+article {
+	background: white;
+	border-color: #df6c20;
+	margin-right: 10px;
+	-webkit-flex: 3 1 0%;
+	flex: 3 1 0%;
+	padding: 30px;
+}
+
+aside {
+	
+	
+	-webkit-flex: 1 1 0%;
+	flex: 1 1 0%;
+}
+
+nav{
+	border-color: white;
+	-webkit-flex: 1 1 0%;
+	flex: 1 1 0%;
+	
+}
+
+
+
+.btn{
+
+	background-color: #10c0c9;
+  	color: white;
+  	padding: 12px;
+  	margin: 10px 0;
+  	border: none;
+  	width: 50%;
+  	border-radius: 3px;
+  	cursor: pointer;
+  	font-size: 17px;
+	
+	
+}
+
+.btn:hover{
+
+	background-color: #14757a;
+}
+
+.btn2{
+	float: right;
+	background-color: #10c0c9;
+  	color: white;
+  	padding: 8px;
+  	margin: 0px auto;
+  	border: none;
+  	width: 25%;
+  	border-radius: 3px;
+  	cursor: pointer;
+  	font-size: 17px;
+	color: white;
+	
+}
+
+.btn2:hover{
+
+	background-color: #14757a;
+}
+
+
+/*table styling*/
+
+#customers {
+  font-family: Verdana, Arial;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #11c2b0;
+  color: white;
+}
