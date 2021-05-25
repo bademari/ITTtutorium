@@ -197,6 +197,8 @@ public class InventoryController implements Serializable {
     
     //#################Codeveränderung!!!!#################
     
+    
+    
     public String prepareInventoryByStation(){
         
         current = (Inventory) getItems().getRowData();
@@ -205,6 +207,8 @@ public class InventoryController implements Serializable {
         return "stationsbestand";
         
     }
+    
+    
     
     
     public List<Inventory> getInventorybyStation(java.lang.Integer stationID){
@@ -248,15 +252,15 @@ public class InventoryController implements Serializable {
     public Integer getSelectedProductAmount(java.lang.Integer productID){
     
     
-        List<Inventory> inventorylist = ejbFacade.inventoryByProduct(productID);
+        List<Inventory> inventoryList = ejbFacade.inventoryByProduct(productID);
         
         int amount = 0;
         
-        Iterator<Inventory> itr = inventorylist.iterator();
+        Iterator<Inventory> iterator = inventoryList.iterator();
         
-        while(itr.hasNext())
+        while(iterator.hasNext())
         {
-            Inventory inv = (Inventory) itr.next();
+            Inventory inv = (Inventory) iterator.next();
             amount += inv.getCurrentAmount();
         
         }
@@ -277,6 +281,10 @@ public class InventoryController implements Serializable {
     
      
     //#################Codeveränderung ENDE!!!!#################
+     
+     
+     
+     
         
     @FacesConverter(forClass = Inventory.class)
     public static class InventoryControllerConverter implements Converter {

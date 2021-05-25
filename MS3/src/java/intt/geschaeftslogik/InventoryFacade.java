@@ -38,7 +38,7 @@ public class InventoryFacade extends AbstractFacade<Inventory> {
     
     public List<Inventory> inventoryByStation(java.lang.Integer stationID){
     
-        List<Inventory> inv = em.createNamedQuery("inventory.findByStationID")
+        List<Inventory> inv = em.createNamedQuery("Inventory.findByStationID")
                 .setParameter("stationID", stationID)
                 .getResultList();
         
@@ -49,7 +49,7 @@ public class InventoryFacade extends AbstractFacade<Inventory> {
       
     public List<Inventory> inventoryByProduct(java.lang.Integer productID){
     
-        List<Inventory> inv = em.createNamedQuery("inventory.findByProductID")
+        List<Inventory> inv = em.createNamedQuery("Inventory.findByProductID")
                 .setParameter("productID", productID)
                 .getResultList();
         

@@ -56,6 +56,19 @@ public class Inventory implements Serializable {
     @JoinColumn(name = "productID", referencedColumnName = "productID")
     @ManyToOne(optional = false)
     private Products productID;
+    /*
+    @Basic(optional=false)
+    @NotNull
+    @Column(name= "productID")
+    private int productID;
+    
+    @Basic(optional=false)
+    @NotNull
+    @Column(name= "stationID")
+    private int stationID;
+    */
+    
+   
 
     public Inventory() {
     }
@@ -111,6 +124,51 @@ public class Inventory implements Serializable {
     public void setProductID(Products productID) {
         this.productID = productID;
     }
+    
+    
+     /*#################Code hinzugefügt#################*/
+    
+    public String getProductName(){
+    
+        Products temp = this.productID;
+        String name = temp.getName();
+        return name;
+    }
+    
+       public String getStationLocation(){
+    
+        Station temp = this.stationID;
+        String location = temp.getLocation();
+        return location;
+    }
+       
+        public String getStationType(){
+    
+        Station temp = this.stationID;
+        String type = temp.getType();
+        return type;
+    }
+        
+        public Integer getIntStationID(){
+            
+            Station temp = this.stationID;
+            Integer stid = temp.getStationID();
+            return stid;
+            
+        }
+        
+        public Integer getIntProductID(){
+            
+            Products temp = this.productID;
+            Integer prid = temp.getProductID();
+            return prid;
+            
+        }
+    
+    /*#################Code Ende#################*/
+        
+        
+        
 
     @Override
     public int hashCode() {

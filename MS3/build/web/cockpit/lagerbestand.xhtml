@@ -38,15 +38,26 @@
                         </h:column>
                        <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListInventoryTitle_stationID}"/>
+                                <h:outputText value="Standort"/>
                             </f:facet>
-                            <h:outputText value="#{item.stationID}"/>
+                              <h:outputText value="#{item.getStationLocation()}"/>
+                               
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListInventoryTitle_productID}"/>
+                                <h:outputText value="Filialtyp"/>
                             </f:facet>
-                            <h:outputText value="#{item.productID}"/>
+                              <h:outputText value="#{item.getStationType()}"/>
+                               
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Produktbezeichnung"/>
+                            </f:facet>
+                            
+                            <h:outputText value="#{item.getProductName()}"/>
+                           
+                            
                         </h:column>
                         <h:column>
                             <f:facet name="header">

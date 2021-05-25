@@ -6,6 +6,7 @@
 package intt.geschaeftslogik;
 
 import intt.datenlogik.Products;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -28,5 +29,20 @@ public class ProductsFacade extends AbstractFacade<Products> {
     public ProductsFacade() {
         super(Products.class);
     }
+    
+    
+    /*############eigener Code (ACHTUNG: ist von Herrn Bader##################*/
+    
+    public List<Products> allProducts(){
+    
+    List<Products> prod = em.createNamedQuery("Products.findAll").getResultList();
+    return prod;
+    
+    
+    }
+    
+    
+    
+    /*###############Ende eigener Code##########################################*/
     
 }
