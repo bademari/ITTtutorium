@@ -36,29 +36,40 @@
                             </f:facet>
                             <h:outputText value="#{item.toStoreAmount}"/>
                         </h:column>
-                       <h:column>
+                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="Standort"/>
                             </f:facet>
-                              <h:outputText value="#{item.getStationLocation()}"/>
-                               
+                           <h:dataTable value="#{stationController.getStation(item.stationID)}" var="stat">
+                            <h:column>
+                                <h:outputText value="#{stat.location}"/>
+                            </h:column>
+                           </h:dataTable>
                         </h:column>
+                        
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="Filialtyp"/>
                             </f:facet>
-                              <h:outputText value="#{item.getStationType()}"/>
-                               
+                           <h:dataTable value="#{stationController.getStation(item.stationID)}" var="stattyp">
+                            <h:column>
+                                <h:outputText value="#{stattyp.type}"/>
+                            </h:column>
+                           </h:dataTable>
                         </h:column>
-                        <h:column>
+                       
+                          <h:column>
                             <f:facet name="header">
                                 <h:outputText value="Produktbezeichnung"/>
                             </f:facet>
-                            
-                            <h:outputText value="#{item.getProductName()}"/>
-                           
-                            
+                           <h:dataTable value="#{productsController.getProducts(item.productID)}" var="prod">
+                            <h:column>
+                                <h:outputText value="#{prod.name}"/>
+                            </h:column>
+                           </h:dataTable>
                         </h:column>
+                       
+                        
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>

@@ -16,7 +16,7 @@
                 <h:panelGroup rendered="#{inventoryController.items.rowCount > 0}">
                     
                     
-                    <h:dataTable value="#{inventoryController.getInventorybyStation(inventoryController.selected.getIntStationID())}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                    <h:dataTable value="#{inventoryController.getInventorybyStation(inventoryController.selected.stationID)}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListInventoryTitle_inventoryID}"/>
@@ -35,17 +35,37 @@
                             </f:facet>
                             <h:outputText value="#{item.toStoreAmount}"/>
                         </h:column>
-                       <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="#{bundle.ListInventoryTitle_stationID}"/>
-                            </f:facet>
-                            <h:outputText value="#{item.stationID}"/>
-                        </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListInventoryTitle_productID}"/>
+                                <h:outputText value="Standort"/>
                             </f:facet>
-                            <h:outputText value="#{item.productID}"/>
+                           <h:dataTable value="#{stationController.getStation(item.stationID)}" var="stat">
+                            <h:column>
+                                <h:outputText value="#{stat.location}"/>
+                            </h:column>
+                           </h:dataTable>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Filialtyp"/>
+                            </f:facet>
+                           <h:dataTable value="#{stationController.getStation(item.stationID)}" var="stattyp">
+                            <h:column>
+                                <h:outputText value="#{stattyp.type}"/>
+                            </h:column>
+                           </h:dataTable>
+                        </h:column>
+                       
+                          <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Produktbezeichnung"/>
+                            </f:facet>
+                           <h:dataTable value="#{productsController.getProducts(item.productID)}" var="prod">
+                            <h:column>
+                                <h:outputText value="#{prod.name}"/>
+                            </h:column>
+                           </h:dataTable>
                         </h:column>
                        
                     
