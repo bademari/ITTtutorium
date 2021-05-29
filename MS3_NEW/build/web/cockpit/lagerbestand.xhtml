@@ -26,13 +26,13 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListInventoryTitle_currentAmount}"/>
+                                <h:outputText value="IST-Bestand"/>
                             </f:facet>
                             <h:outputText value="#{item.currentAmount}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListInventoryTitle_toStoreAmount}"/>
+                                <h:outputText value="SOLL-Bestand"/>
                             </f:facet>
                             <h:outputText value="#{item.toStoreAmount}"/>
                         </h:column>
@@ -60,7 +60,7 @@
                        
                           <h:column>
                             <f:facet name="header">
-                                <h:outputText value="Produktbezeichnung"/>
+                                <h:outputText value="Produkt"/>
                             </f:facet>
                            <h:dataTable value="#{productsController.getProducts(item.productID)}" var="prod">
                             <h:column>
