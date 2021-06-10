@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang=de>
+	<head>
+		<title>Allgold GmbH | Ihre Premium Molkerei</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="css/nav.css"/>
+		<script type="text/javascript" src="js/verkauf.js"></script>
+	</head>
+	
+ <body>
+   
+
+	<header>
+		  <h1>Allgold Premiummolkerei</h1>
+	</header>
+
+	<nav class="sidenav">
+		<a href="index.html">Home</a>
+  		<a href="verkaufNEW.html" style="color:black">Verkauf</a>
+  		<a href="produktauffuellung.html">Produktauffüllung</a>
+  		<a href="lagerverwaltung.html">Lagerverwaltung</a>
+  		
+
+	</nav>
+	<article>
+			  
+		<form class="form-horizontal" action="verkaufREST.php" method="POST">
+				<fieldset>
+                    <input type="hidden" name="action" value = "POST">
+        			<legend class="headline1">Verkauf erfassen</legend>
+
+        			<label for="stationID">Verkaufstellen ID: </label>
+                    <input id="stationID" name="stationID" type="text" placeholder="1-9" required><br><br>
+
+        			<label for="sellerID">Verkäufer ID: </label>
+                    <input id="sellerID" name="sellerID" type="text" placeholder="1-6" required><br><br>
+        			
+                    <table>
+        				<thead>
+        					<tr>
+        						<th>Produkt</th>
+        						<th>Verkaufte Menge</th>
+        					</tr>
+        				</thead>
+        				<tbody>
+        				<tr>
+                            
+        					<td><input type="hidden" id="productID1" name="productID1" value="1">Milch</input></td>
+        					<td><input id="amount1" name="amount1" type="number" placeholder="0" class="form-control input-md"></td>
+
+        				</tr>
+        				<tr>
+
+                            <td><input type="hidden" id="productID2" name="productID2" value="2">Emmentaler</input></td>
+                            <td><input id="amount2" name="amount2" type="number" placeholder="0" class="form-control input-md"></td>
+
+        					
+        				</tr>
+        				<tr>
+                            <td><input type="hidden" id="productID3" name="productID3" value="3">Gouda</input></td>
+                            <td><input id="amount3" name="amount3" type="number" placeholder="0" class="form-control input-md"></td>
+
+        					
+        				</tr>
+        				<tr>
+
+                            <td><input type="hidden" id="productID4" name="productID4" value="4">Joghurt 100g</input></td>
+                            <td><input id="amount4" name="amount4" type="number" placeholder="0" class="form-control input-md"></td>
+
+        					
+        				</tr>
+        				<tr>
+
+                            <td><input type="hidden" id="productID5" name="productID5" value="5">Quark</input></td>
+                            <td><input id="amount5" name="amount5" type="number" placeholder="0" class="form-control input-md"></td>
+
+        					
+        				</tr>
+        				<tr>
+
+                            <td><input type="hidden" id="productID6" name="productID6" value="6">Joghurt 500g</input></td>
+                            <td><input id="amount6" name="amount6" type="number" placeholder="0" class="form-control input-md"></td>
+
+        					
+        				</tr>
+        				
+        				</tbody>
+        			</table>
+        			<br>
+        			
+        			<button type="submit" id="checkout" name="checkout" class="btn">checkout</button>
+        			
+        		</fieldset>
+
+		</form>
+				  
+				  
+				  
+	</article>
+	
+   <footer>
+		&copy; 2021 Allgold Premium Molkerei
+	</footer>
+	
+		
+	 
+  </body>
+</html>
+
+
+	
+	

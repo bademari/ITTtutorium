@@ -1,0 +1,28 @@
+Index.html:
+	dort soll einfach nur ein Bild angezeigt werden und links das Sidenav
+
+Verkauf.html:
+
+	dort soll ein Artikel an den Verkaufsstellen verkauft werden können (Station ID, Product ID, SellerID und Menge)
+
+verkaufsstellenauflisten.html:
+	dort sollen alle Verkaufsstellen aufgelistet werden können, sowie bearbeitet und gelöscht werden
+
+verkaufsstellenhinzufügen.html:
+	dort sollen Verkaufsstellen hinzugefügt werden können
+
+produkteauflisten.html:
+	alle Produkte sollen aufgelistet sowie bearbeitet und gelöscht werden
+
+produktehinzufuegen.html:
+	dort sollen Produkte hinzugefügt werden
+
+lagerverwaltungstation.html (Stationsinventar):
+	dort soll Inventar pro Station gesucht werden können
+
+gesamtlagerverwaltung.html (Gesamtinventar):  
+	dort soll Gesamtinventar aller lagernden Produkte aufgelistet werden
+
+Stationsauffüllung.html:
+	dort soll eben aufgelistet werden können, wo der Fahrer hin muss + die aufgefüllten Sachen eintragen können
+

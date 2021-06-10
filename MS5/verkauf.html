@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang=de>
+	<head>
+		<title>Allgold GmbH | Ihre Premium Molkerei</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="css/nav.css"/>
+		
+	</head>
+	
+ <body>
+   
+
+	<header>
+		  <h1>Allgold Premiummolkerei</h1>
+	</header>
+
+	<nav class="sidenav">
+		<a href="index.html">Home</a>
+  		<a href="verkauf.html" style="color:black">Verkauf</a>
+  		<a href="produktauffuellung.html">Produktauffüllung</a>
+  		<a href="lagerverwaltung.html">Lagerverwaltung</a>
+  		<a href="verkaufNEW.html">Verkauf 2.0</a>
+
+	</nav>
+	<article>
+			  
+		<form class="form-horizontal" action="verkaufREST.php" method="POST">
+				<fieldset>
+						<input type="hidden" name="action" value = "POST">
+					 	<legend>Verkauf erfassen</legend>
+					 	
+
+            			<div class="form-group">
+             			 	<label class="col-md-4 control-label" for="stationID">Verkaufsstelle:</label><br>   
+              				<select id="stationID" name="stationID">
+							    <option value="1">Kempten (Firmensitz)</option>
+							    <option value="2">Kempten (Aussenstelle)</option>
+							    <option value="3">Kaufbeuren</option>
+							    <option value="4">Memmingen</option>
+							    <option value="5">Isny</option>
+							    <option value="6">Marktoberdorf</option>
+							    <option value="7">Sonthofen</option>
+							    <option value="8">Oberstdorf</option>
+							    <option value="9">Oberstaufen</option>
+							  </select>
+            			</div><br>
+
+
+
+            			<div class="form-group">
+             			 	<label class="col-md-4 control-label" for="productID">Produkt ID:</label><br>  
+              				<select id="productID" name="productID">
+							    <option value="1">Milch</option>
+							    <option value="2">Emmentaler</option>
+							    <option value="3">Gauda</option>
+							    <option value="4">Joghurt 100g</option>
+							    <option value="5">Quark</option>
+							    <option value="6">Joghurt 500g</option>
+							  </select>
+
+					 	
+            			</div><br>
+
+            			<div class="form-group">
+             			 	<label class="col-md-4 control-label" for="amount">Menge:</label>  
+              				<div class="col-md-4">
+               			 		<input id="amount" name="amount" class="form-control input-md" required="" type="number">
+              				</div>
+            			</div><br>
+
+
+					 	<div class="form-group">
+             			 	<label class="col-md-4 control-label" for="sellerID">Verkäufer ID:</label>  
+              				<div class="col-md-4">
+               			 		<input id="sellerID" name="sellerID" placeholder="1-6" class="form-control input-md" required="" type="text">
+              				</div>
+            			</div><br>
+
+					 	
+					 	 <!-- Button -->
+			           
+			             
+			            <button type="submit" id="checkout" name="checkout" class="btn">checkout</button>
+			              
+			            
+				 		
+				 </fieldset>
+		</form>
+				  
+				  
+				  
+	</article>
+	
+   <footer>
+		&copy; 2021 Allgold Premium Molkerei
+	</footer>
+	
+		
+	 
+  </body>
+</html>
+
+
+	
+	
